@@ -2,7 +2,7 @@ RGB = tuple[int, int, int]
 
 def read_input() -> dict[int, list[RGB]]:
     result: dict[int, list[RGB]] = dict()
-    with open('04/input.txt', 'r') as file:
+    with open('input.txt', 'r') as file:
         for line in file.readlines():
             game, nums = line.strip('\n').split(': ')
             game_num = game.split(' ')[1]

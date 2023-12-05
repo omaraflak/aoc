@@ -1,4 +1,4 @@
-with open('01/input.txt', 'r') as file:
+with open('input.txt', 'r') as file:
     s = 0
     for line in file.readlines():
         first = -1

@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-with open('08/input.txt', 'r') as file:
+with open('input.txt', 'r') as file:
     cards: dict[int, int] = defaultdict(lambda: 1)
     lines = file.readlines()
     for line in lines:

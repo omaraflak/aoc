@@ -8,7 +8,7 @@ def map_number(n: int, map: list[Range]) -> int:
     return n
 
 
-with open('09/input.txt', 'r') as file:
+with open('input.txt', 'r') as file:
     lines = file.readlines()
     seeds = [int(x) for x in lines[0].split(': ')[1].strip('\n').split(' ')]
     map: list[Range] = list()

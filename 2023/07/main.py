@@ -1,4 +1,4 @@
-with open('07/input.txt', 'r') as file:
+with open('input.txt', 'r') as file:
     total_points = 0
     for line in file.readlines():
         winning, numbers = line.split(':')[1].split('|')

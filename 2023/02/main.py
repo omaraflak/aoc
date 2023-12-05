@@ -3,7 +3,7 @@ nums = [
     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
 ]
 
-with open('02/input.txt', 'r') as file:
+with open('input.txt', 'r') as file:
     s = 0
     for line in file.readlines():
         first_pos, first_idx = -1, -1
