@@ -42,7 +42,7 @@ def map_range(_range: RangeMap, map: list[RangeMap], result: list[RangeMap] = No
         
 
 
-with open('10/input.txt', 'r') as file:
+with open('input.txt', 'r') as file:
     lines = file.readlines()
     seeds = [int(x) for x in lines[0].split(': ')[1].strip('\n').split(' ')]
     seeds = [(seeds[i], seeds[i + 1]) for i in range(0, len(seeds), 2)]
