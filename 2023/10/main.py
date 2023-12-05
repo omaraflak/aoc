@@ -7,16 +7,16 @@ def get_overlap_and_non_overlap(t1: int, t2: int, s1: int, s2: int) -> tuple[Ran
     end = min(t2, s2)
 
     if start >= end:
-        return (None, [])
+        return None, []
 
     if t1 <= s1 and t2 >= s2:
-        return ((start, end), [])
+        return (start, end), []
 
     if s1 <= t1 and s2 >= t2:
-        return ((start, end), [(s1, t1), (t2, s2)])
+        return (start, end), [(s1, t1), (t2, s2)]
 
     non_overlap = (s1, t1) if start == t1 else (t2, s2)
-    return ((start, end), [non_overlap])
+    return (start, end), [non_overlap]
 
 
 
