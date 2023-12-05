@@ -1,7 +1,8 @@
-Range = tuple[int, int, int]
+RangeMap = tuple[int, int, int]
+Range = tuple[int, int]
 
 
-def get_overlap_and_non_overlap(t1: int, t2: int, s1: int, s2: int) -> tuple[tuple[int, int], list[tuple[int, int]]]:
+def get_overlap_and_non_overlap(t1: int, t2: int, s1: int, s2: int) -> tuple[Range, list[Range]]:
     start = max(t1, s1)
     end = min(t2, s2)
 
@@ -19,7 +20,7 @@ def get_overlap_and_non_overlap(t1: int, t2: int, s1: int, s2: int) -> tuple[tup
 
 
 
-def map_range(_range: Range, map: list[Range], result: list[Range] = None) -> list[Range]:
+def map_range(_range: RangeMap, map: list[RangeMap], result: list[RangeMap] = None) -> list[RangeMap]:
     result = result or []
     x2, l2 = _range
     for y1, x1, l1 in map:
@@ -47,7 +48,7 @@ with open('10/input.txt', 'r') as file:
     seeds = [(seeds[i], seeds[i + 1]) for i in range(0, len(seeds), 2)]
 
     i = 3
-    map: list[Range] = list()
+    map: list[RangeMap] = list()
     while i < len(lines):
         map.clear()
         while i < len(lines) and lines[i] != '\n':
