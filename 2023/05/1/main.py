@@ -11,9 +11,9 @@ def map_number(n: int, map: list[Range]) -> int:
 with open('input.txt', 'r') as file:
     lines = file.readlines()
     seeds = [int(x) for x in lines[0].split(': ')[1].strip('\n').split(' ')]
-    map: list[Range] = list()
 
     i = 3
+    map: list[Range] = list()
     while i < len(lines):
         map.clear()
         while i < len(lines) and lines[i] != '\n':
