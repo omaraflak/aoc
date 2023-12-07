@@ -19,7 +19,7 @@ def hand_key(hand: str) -> tuple[int,...]:
             max_card = 'A'
         counts[max_card] += counts['J']
         del counts['J']
-    
+
     values = set(counts.values())
     unique_cards = len(counts)
 
