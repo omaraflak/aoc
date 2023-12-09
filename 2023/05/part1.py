@@ -24,4 +24,7 @@ with open('input.txt', 'r') as file:
         seeds = [map_number(n, maps) for n in seeds]
         i += 2
 
-    print(min(seeds))
+    result = min(seeds)
+
+    assert result == 214922730
+    print(result)

@@ -34,5 +34,6 @@ with open('input.txt', 'r') as file:
         else:
             s += last_idx
     
+    assert s == 53389
     print(s)
         

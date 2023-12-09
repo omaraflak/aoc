@@ -11,6 +11,12 @@ def solve(t: int, d: int) -> int:
 
 inputs = [(40, 215), (70, 1051), (98, 2147), (79, 1005)]
 
-print('part 1:', prod(solve(t, d) for t, d in inputs))
-print('part 2:', solve(40709879, 215105121471005))
+result1 = prod(solve(t, d) for t, d in inputs)
+result2 = solve(40709879, 215105121471005)
+
+assert result1 == 1084752
+assert result2 == 28228952
+print('part 1:', result1)
+print('part 2:', result2)
+
 

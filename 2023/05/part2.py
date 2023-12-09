@@ -63,4 +63,7 @@ with open('input.txt', 'r') as file:
         })
         i += 2
 
-    print(min(r[0] for r in seeds))
+    result = min(r[0] for r in seeds)
+
+    assert result == 148041808
+    print(result)

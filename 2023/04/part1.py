@@ -7,4 +7,6 @@ with open('input.txt', 'r') as file:
         points = sum(1 for n in winning if n in numbers)
         if points > 0:
             total_points += 1 << (points - 1)
+    
+    assert total_points == 26218
     print(total_points)

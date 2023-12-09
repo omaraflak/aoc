@@ -22,20 +22,15 @@ def read_input() -> dict[int, list[RGB]]:
         return result
 
 
-def get_minimum_set(game: list[RGB]) -> RGB:
-    red, green, blue = 0, 0, 0
-    for r, g, b in game:
-        red, green, blue = max(red, r), max(green, g), max(blue, b)
-    return red, green, blue
-
-
-def power_set(rgb: RGB) -> int:
+def is_possible(rgb: RGB) -> bool:
     red, green, blue = rgb
-    return red * green * blue
+    return red <= 12 and green <= 13 and blue <= 14
 
 
-sum_min_set = 0
-for game in read_input().values():
-    sum_min_set += power_set(get_minimum_set(game))
+possible_games_sum = 0
+for game, draws in read_input().items():
+    if all(is_possible(draw) for draw in draws):
+        possible_games_sum += game
 
-print(sum_min_set)
+assert possible_games_sum == 2076
+print(possible_games_sum)

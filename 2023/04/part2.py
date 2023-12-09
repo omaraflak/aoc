@@ -13,4 +13,7 @@ with open('input.txt', 'r') as file:
         for i in range(game + 1, game + 1 + matching):
             cards[i] += cards[game]
 
-    print(sum(cards[i] for i in range(1, len(lines) + 1)))
+    result = sum(cards[i] for i in range(1, len(lines) + 1))
+
+    assert result == 9997537
+    print(result)

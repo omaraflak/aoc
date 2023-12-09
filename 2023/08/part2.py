@@ -1,3 +1,4 @@
+import math
 import re
 
 
@@ -9,12 +10,18 @@ with open('input.txt', 'r') as file:
         for a, b, c in pattern.findall(line):
             graph[a] = (b, c)
 
+
+def count_steps(key: str) -> int:
     count = 0
-    curr = 'AAA'
-    while curr != 'ZZZ':
+    while key[-1] != 'Z':
         dir = path[count % len(path)]
         dir = 0 if dir == 'L' else 1
-        curr = graph[curr][dir]
+        key = graph[key][dir]
         count += 1
+    return count
 
-    print(count)
+steps = [count_steps(key) for key in graph if key[-1] == 'A']
+result = math.lcm(*steps)
+
+assert result == 12927600769609
+print(result)

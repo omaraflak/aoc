@@ -52,4 +52,5 @@ with open('input.txt', 'r') as file:
     hands = [(x, int(y)) for x, y in hands]
     hands.sort(key=lambda x: hand_key(x[0]))
     result = sum(hand[1] * i for i, hand in enumerate(hands, start=1))
+    assert result == 248559379
     print(result)

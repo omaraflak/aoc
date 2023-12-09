@@ -47,4 +47,5 @@ for nums in gears.values():
     if len(nums) == 2:
         sum_of_gear_ratios += nums[0] * nums[1]
 
+assert sum_of_gear_ratios == 85010461
 print(sum_of_gear_ratios)

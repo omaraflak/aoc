@@ -27,4 +27,5 @@ for i, line in enumerate(lines):
                 sum_of_parts += int(line[start : j])
             start = -1
 
+assert sum_of_parts == 550064
 print(sum_of_parts)

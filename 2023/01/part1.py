@@ -10,4 +10,6 @@ with open('input.txt', 'r') as file:
                     first = p
                 last = p
         s += first * 10 + last
+
+    assert s == 54338
     print(s)
