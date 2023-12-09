@@ -18,5 +18,3 @@ assert result1 == 1084752
 assert result2 == 28228952
 print('part 1:', result1)
 print('part 2:', result2)
-
-
