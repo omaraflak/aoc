@@ -17,7 +17,7 @@ def read_input() -> list[str]:
         return [line.strip('\n') for line in file.readlines()]
 
 
-def find_start(lines: list[str]) -> Node:
+def get_start(lines: list[str]) -> Node:
     for i, line in enumerate(lines):
         for j, c in enumerate(line):
             if c == 'S':
@@ -41,7 +41,7 @@ def get_valid_neighbors(lines: list[str], node: Node) -> list[Node]:
 
 def get_loop_nodes(lines: list[str]) -> set[Node]:
     loop: set[Node] = set()
-    queue = [find_start(lines)]
+    queue = [get_start(lines)]
     while queue:
         node = queue.pop()
         if node in loop:
