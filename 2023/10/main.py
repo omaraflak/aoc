@@ -88,6 +88,5 @@ tiles = count_enclosed_tiles(lines, loop)
 
 assert max_dist == 6842
 assert tiles == 393
-
 print('part1:', max_dist)
 print('part2:', tiles)
