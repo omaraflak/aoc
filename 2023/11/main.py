@@ -1,5 +1,6 @@
 Pos = tuple[int, int]
 
+
 def read_file() -> list[str]:
     with open('input.txt', 'r') as file:
         return [line.strip('\n') for line in file.readlines()]
