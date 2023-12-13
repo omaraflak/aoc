@@ -9,20 +9,14 @@ def count_diff(s1: str, s2: str) -> int:
 
 def find_symmetry(lines: list[str], diff: int) -> int:
     for i in range(1, len(lines)):
-        reflects = True
         top, down = i - 1, i
         e = 0
         while top >= 0 and down < len(lines):
             e += count_diff(lines[top], lines[down])
-
-            if e > diff:
-                reflects = False
-                break
-
             top -= 1
             down += 1
         
-        if reflects and e == diff:
+        if e == diff:
             return i
 
     return 0
@@ -38,6 +32,8 @@ def solve():
     lines = read_file()
     part1 = sum(score(line, 0) for line in lines)
     part2 = sum(score(line, 1) for line in lines)
+    assert part1 == 35360
+    assert part2 == 36755
     print('part1:', part1)
     print('part2:', part2)
 
